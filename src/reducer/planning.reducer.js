@@ -45,7 +45,8 @@ function initEmptyCells(columnIndex, timeStart, timeEnd){
     return tabOfEmptyCells;
 }
 
-const reducer = (state = DEFAULT_STATE  , action) =>{
+const reducer = (state = DEFAULT_STATE, action, allState) =>{
+
     if(!action){
         return state;
     }
