@@ -1,5 +1,6 @@
 import {set, get} from 'dot-prop-immutable';
 import cellService from '../service/cell.service';
+import {CELL_ACTION} from '../action/cell.action';
 
 const DEFAULT_STATE = {
     mode: {
@@ -49,7 +50,7 @@ const reducer = (state = DEFAULT_STATE  , action) =>{
         return state;
     }
     switch (action.type){
-        case 'CLICK_CELL':
+        case CELL_ACTION.CLICK_CELL:
             const selectedCell = action.payload;
             const cellToUpdatePropPath = `columns.${selectedCell.columnIndex}.cells.${selectedCell.index}.selected`;
             let nextState = set(state, cellToUpdatePropPath, !get(state, cellToUpdatePropPath));
