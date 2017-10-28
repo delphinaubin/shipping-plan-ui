@@ -87,57 +87,58 @@ describe('counter reducer', () => {
 
         });
 
-    });
 
-    it('should active the add mode one is selected', () => {
-        const initalState = anInitialState(),
-            A_COLUMN_INDEX = 0,
-            A_CELL_INDEX = 3,
-            A_CELL = {
-                index: A_CELL_INDEX,
-                columnIndex: A_COLUMN_INDEX,
-                selected: false
-            };
-        initalState.columns[A_COLUMN_INDEX].cells[A_CELL_INDEX].selected = false;
+        it('should active the add mode one is selected', () => {
+            const initalState = anInitialState(),
+                A_COLUMN_INDEX = 0,
+                A_CELL_INDEX = 3,
+                A_CELL = {
+                    index: A_CELL_INDEX,
+                    columnIndex: A_COLUMN_INDEX,
+                    selected: false
+                };
+            initalState.columns[A_COLUMN_INDEX].cells[A_CELL_INDEX].selected = false;
 
-        const reducedState = planningReducer(initalState, selectCell(A_CELL));
-        expect(reducedState.mode.creation).toBe(true);
+            const reducedState = planningReducer(initalState, selectCell(A_CELL));
+            expect(reducedState.mode.creation).toBe(true);
 
-    });
+        });
 
-    it('should toggle the add mode if no cell is selected', () => {
-        const initalState = anInitialState(),
-            A_COLUMN_INDEX = 0,
-            A_CELL_INDEX = 3,
-            A_CELL = {
-                index: A_CELL_INDEX,
-                columnIndex: A_COLUMN_INDEX,
-                selected: true
-            };
-        initalState.columns[A_COLUMN_INDEX].cells[A_CELL_INDEX].selected = true;
+        it('should toggle the add mode if no cell is selected', () => {
+            const initalState = anInitialState(),
+                A_COLUMN_INDEX = 0,
+                A_CELL_INDEX = 3,
+                A_CELL = {
+                    index: A_CELL_INDEX,
+                    columnIndex: A_COLUMN_INDEX,
+                    selected: true
+                };
+            initalState.columns[A_COLUMN_INDEX].cells[A_CELL_INDEX].selected = true;
 
-        const reducedState = planningReducer(initalState, selectCell(A_CELL));
-        expect(reducedState.mode.creation).toBe(false);
+            const reducedState = planningReducer(initalState, selectCell(A_CELL));
+            expect(reducedState.mode.creation).toBe(false);
 
-    });
+        });
 
-    it('should not toggle the add mode if some cell are still selected', () => {
-        const initalState = anInitialState(),
-            A_COLUMN_INDEX = 0,
-            A_CELL_INDEX = 3,
-            ANOTHER_COLUMN_INDEX = 1,
-            ANOTHER_CELL_INDEX = 2,
-            A_CELL = {
-                index: A_CELL_INDEX,
-                columnIndex: A_COLUMN_INDEX,
-                selected: true
-            };
+        it('should not toggle the add mode if some cell are still selected', () => {
+            const initalState = anInitialState(),
+                A_COLUMN_INDEX = 0,
+                A_CELL_INDEX = 3,
+                ANOTHER_COLUMN_INDEX = 1,
+                ANOTHER_CELL_INDEX = 2,
+                A_CELL = {
+                    index: A_CELL_INDEX,
+                    columnIndex: A_COLUMN_INDEX,
+                    selected: true
+                };
 
-        initalState.columns[A_COLUMN_INDEX].cells[A_CELL_INDEX].selected = true;
-        initalState.columns[ANOTHER_COLUMN_INDEX].cells[ANOTHER_CELL_INDEX].selected = true;
+            initalState.columns[A_COLUMN_INDEX].cells[A_CELL_INDEX].selected = true;
+            initalState.columns[ANOTHER_COLUMN_INDEX].cells[ANOTHER_CELL_INDEX].selected = true;
 
-        const reducedState = planningReducer(initalState, selectCell(A_CELL));
-        expect(reducedState.mode.creation).toBe(true);
+            const reducedState = planningReducer(initalState, selectCell(A_CELL));
+            expect(reducedState.mode.creation).toBe(true);
+
+        });
 
     });
 
