@@ -19,7 +19,14 @@ const DEFAULT_STATE = {
             name: 'Virginie',
             cells: initEmptyCells(1, {hour: 8, minutes:0},{hour: 18, minutes:0})
         }
-    ]
+    ],
+    shippingForm: {
+        hour: undefined,
+        client: {
+            name: '',
+            city: ''
+        }
+    }
 
 
 };

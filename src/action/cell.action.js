@@ -1,6 +1,6 @@
 export const CELL_ACTION = {
   CLICK_CELL: 'CLICK_CELL'
-}
+};
 
 export function selectCell(cell){
     return {

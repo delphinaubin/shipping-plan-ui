@@ -1,5 +1,13 @@
 export function anInitialState() {
     return {
+        shippingForm: {
+            isValid: false,
+            hour: '08h30',
+            client: {
+                name: '',
+                city: ''
+            }
+        },
         mode: {
             creation: false
         },
