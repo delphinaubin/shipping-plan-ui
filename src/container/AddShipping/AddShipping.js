@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import shippingModel from '../../model/ShippingModel';
+
 import AddShippingForm from '../../component/Shipping/AddShippingForm';
 import Drawer from 'material-ui/Drawer';
-import {connect} from 'react-redux';
 
 import {formShippingChange} from '../../action/shippingform.action'
 
@@ -13,6 +15,10 @@ class AddShipping extends Component {
     static defaultProps = {
         shipping: {},
         formVisible: false
+    };
+
+    static propTypes = {
+        shipping: shippingModel
     };
 
 

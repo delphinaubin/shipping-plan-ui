@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import shippingModel from '../../model/ShippingModel';
 
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -14,6 +15,10 @@ export default class AddShippingForm extends Component {
                 name: ''
             }
         }
+    };
+
+    static propTypes = {
+        shipping: shippingModel
     };
 
 
@@ -57,4 +62,4 @@ export default class AddShippingForm extends Component {
 
 const style = {
     padding: '2em'
-}
+};
