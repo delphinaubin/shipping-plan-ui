@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 
+import clientModel from '../model/ClientModel';
+
 import Chip from 'material-ui/Chip';
 class ShippingLabel extends Component{
     static defaultProps = {
         client: {name: undefined, city: undefined}
+    };
+
+    static propTypes = {
+        client: clientModel
     };
 
     render(){

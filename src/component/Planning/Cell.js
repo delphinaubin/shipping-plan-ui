@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import clientModel from '../../model/ClientModel'
 import ShippingLabel from '../ShippingLabel';
 
 class Cell extends Component {
@@ -7,6 +9,12 @@ class Cell extends Component {
         selected: false,
         onclick: () => {
         }
+    };
+
+    static propTypes = {
+        client: clientModel,
+        selected: PropTypes.bool,
+        onclick: PropTypes.func
     };
 
     render() {

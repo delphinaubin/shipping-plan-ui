@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
 import shippingModel from '../../model/ShippingModel';
 
 import AddShippingForm from '../../component/Shipping/AddShippingForm';
@@ -18,9 +20,9 @@ class AddShipping extends Component {
     };
 
     static propTypes = {
-        shipping: shippingModel
+        shipping: shippingModel,
+        formVisible: PropTypes.bool
     };
-
 
     render() {
         return <Drawer disableSwipeToOpen={true} openSecondary={true} open={this.props.formVisible} width={400}>

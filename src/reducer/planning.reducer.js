@@ -28,7 +28,6 @@ const DEFAULT_STATE = {
         }
     }
 
-
 };
 
 function initEmptyCells(columnIndex, timeStart, timeEnd){
