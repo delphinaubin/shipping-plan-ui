@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
-import shippingModel from '../../model/ShippingModel';
+import shippingModel from '../../shape/ShippingShape';
 
 import AddShippingForm from '../../component/Shipping/AddShippingForm';
 import Drawer from 'material-ui/Drawer';

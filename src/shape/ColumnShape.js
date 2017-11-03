@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import cellModel from './CellModel';
+import cellShape from './CellShape';
 
 
 export default PropTypes.shape({
     name: PropTypes.string,
-    cells: PropTypes.arrayOf(cellModel)
+    cells: PropTypes.arrayOf(cellShape)
 })

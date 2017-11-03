@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import shippingModel from '../../model/ShippingModel';
+import shippingModel from '../../shape/ShippingShape';
 
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';

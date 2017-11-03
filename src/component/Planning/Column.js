@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import cellModel from '../../model/CellModel';
+import cellShape from '../../shape/CellShape';
 import Cell from './Cell';
 import ColumnHeader from './ColumnHeader';
 
@@ -18,7 +18,7 @@ class Column extends Component {
     static propTypes = {
         onCellClick: PropTypes.func,
         data: PropTypes.shape({
-            cells:PropTypes.arrayOf(cellModel)
+            cells:PropTypes.arrayOf(cellShape)
         })
     };
 

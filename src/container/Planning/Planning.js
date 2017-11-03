@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Column from '../../component/Planning/Column';
 import {connect} from 'react-redux';
 import {selectCell} from '../../action/cell.action';
-import columnModel from '../../model/ColumnModel';
+import columnModel from '../../shape/ColumnShape';
 
 class Planning extends Component {
 

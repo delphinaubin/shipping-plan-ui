@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import clientModel from '../model/ClientModel';
+import clientModel from '../shape/ClientShape';
 
 import Chip from 'material-ui/Chip';
 class ShippingLabel extends Component{
